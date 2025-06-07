@@ -3,7 +3,7 @@
 
 This repository contains the PyTorch implementation of Dual-Process Image Generation.
 
-[[`Project Page`](https://dual-process.github.io)][[`arXiv`]()]
+[[`Project Page`](https://dual-process.github.io)][[`arXiv`](https://arxiv.org/abs/2506.01955)]
 
 ## Setup
 This code was tested with Python 3.10. To install the necessary packages, please run:
