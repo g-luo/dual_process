@@ -146,7 +146,7 @@ def visualize_vanilla_results(pipe, generator_kwargs, prompt, edit, grid_size, e
     for r in range(grid_size[0]):
         eval_images = run_eval(pipe, generator_kwargs, prompt, [eval_weight], eval_n, eval_seed + r, eval_noise=eval_noise)
         metas = None
-        if "vlm" in edit["loss_fn"]:
+        if "vlm" in edit["loss_fn"] and edit.get("guidance_prompts"):
             # Generate with vlm
             if max_new_tokens >= 1:
                 metas = [run_vlm(pipe, edit, pred_x0=image, max_new_tokens=max_new_tokens) for image in eval_images]
